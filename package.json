@@ -1,0 +1,24 @@
+{
+  "name": "quiz-game-lukwan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build-prod": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staten-island-tech/quiz-game-lukwan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staten-island-tech/quiz-game-lukwan/issues"
+  },
+  "homepage": "https://github.com/staten-island-tech/quiz-game-lukwan#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
