@@ -1,5 +1,5 @@
 //arrays
-const questions = [
+[
   { question: "The following are all Mondstadt characters except", answer: 4 },
   { question: "What is the Vigilant Yaksha's true name?", answer: 2 },
   { question: "Diluc, owner of the Dawn Winery, prefers to drink", answer: 2 },
