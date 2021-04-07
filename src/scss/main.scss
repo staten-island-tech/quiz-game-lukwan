@@ -1,79 +1,83 @@
 @import "_palette.scss";
 
 html,
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
-    background-color: color(dark);
-    background-image: url(/img/genshin_bg.png);
-    background-size: cover;
-    font-family: 'Open Sans', sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: color(dark);
+  background-image: url(/img/genshin_bg.png);
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
 }
 
 .quiz {
-    font-size: 2rem;
-    color: color(primary-light);
-    background-color: color(mid);
-    margin: 2rem;
-    padding: 2rem 5rem 5rem 5rem;
+  font-size: 2rem;
+  color: color(primary-light);
+  background-color: color(mid);
+  margin: 2rem;
+  padding: 2rem 5rem 5rem 5rem;
 }
 
 .title-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-    font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .quiz-block {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.quiz-question{
-    display: flex;
-    flex-direction: column;
-    margin: 0.25rem;
-    width: 100%;
-    padding: 2rem;
-    align-items: center;
-    font-size: 2.5rem;
-    font-family: 'Merriweather', serif;
-    background-color: color(primary);
+.quiz-question {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem;
+  width: 100%;
+  padding: 2rem;
+  align-items: center;
+  font-size: 2.5rem;
+  font-family: "Merriweather", serif;
+  background-color: color(primary);
 }
 
 .quiz-choices {
-    margin: 1rem;
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .quiz-answer {
-    background-color: color(accent);
-    width: 20%;
-    margin: .5rem;
-    padding: 1.5rem;
-    text-align: center;
+  background-color: color(accent);
+  width: 20%;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .quiz-submit {
-    background-color: color(dark);
-    padding: 1.5rem;
+  background-color: color(dark);
+  padding: 1.5rem;
 }
 
 .btn {
-    transition: all 0.2s;
+  transition: all 0.2s;
 }
 .btn:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .btn:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.hide {
+  display: none;
 }

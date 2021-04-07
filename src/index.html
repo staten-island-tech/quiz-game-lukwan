@@ -16,7 +16,6 @@
     <title>Genshin Quiz</title>
   </head>
   <body>
-    <script src="js/index.js"></script>
     <div class="quiz">
       <header>
         <div class="title-block">
@@ -28,18 +27,19 @@
           </p>
         </div>
       </header>
-      <div class="quiz-block">
+      <div class="quiz-block hide" id="quiz-block">
         <div class="quiz-question">
-            <span>Insert Text Here<span>
+            <span id="question-text">Insert Text Here<span>
             </div>
         <div class="quiz-choices">
-          <span class="btn quiz-answer answer-1" id="ch1">Insert Answer 1 Here</span>
+          <span class="btn quiz-answer answer-1" id="choice1">Insert Answer 1 Here</span>
           <span class="btn quiz-answer answer-2"id="choice2">Insert Answer 2 Here</span>
           <span class="btn quiz-answer answer-3"id="choice3">alatus</span>
           <span class="btn quiz-answer answer-4" id="choice4">Conqueror of demons</span>
         </div>
-        <div class="btn quiz-submit" id="submit-btn">Insert Submit Here</div>
+        <div class="btn quiz-submit" id="submit-btn">Next</div>
       </div>
     </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
