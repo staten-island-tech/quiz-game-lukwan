@@ -1,4 +1,4 @@
-const questions = [
+/* const questions = [
     { question: "The following are all Mondstadt characters except", answers: [
         { text:'Venti', correct:false}
         { text:'Mona', correct:false}
@@ -27,8 +27,8 @@ const questions = [
   { question: "What secret is Celestia hiding from humanity?", answer: 2 },
   { question: "What is the name of the Unknown God?", answer: 1 },
   { question: "What are the stars?", answer: 1 },
-];
-   /* except", answer: 4 },
+]; */
+/* except", answer: 4 },
     { question: "What is the Vigilant Yaksha's true name?", answer: 2 },
     { question: "Diluc, owner of the Dawn Winery, prefers to drink", answer: 2 },
     {
@@ -48,3 +48,5 @@ const questions = [
     { question: "What is the name of the Unknown God?", answer: 1 },
     { question: "What are the stars?", answer: 1 },
   ]; */
+const test = "tessssst";
+export { test };

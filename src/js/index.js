@@ -1,6 +1,7 @@
 //arrays
-
-[
+import { test } from "./questions";
+console.log(test);
+/* [
   {
     questionContent: "The following are all Mondstadt characters except",
     choices: [
@@ -135,7 +136,7 @@ DOMSelectors.answerTwo.addEventListener("click", responseTwo);
 DOMSelectors.answerThree.addEventListener("click", responseThree);
 DOMSelectors.answerFour.addEventListener("click", responseFour);
 
-console.log("hi");
+console.log("hi"); */
 //real deal
 
 /* List of things to do: 
@@ -148,9 +149,9 @@ console.log("hi");
 
 //1+2:
 
-window.addEventListener("load", (e) => {
+/* window.addEventListener("load", (e) => {
   console.log("started");
   DOMSelectors.quizBlock.classList.remove("hide");
 });
-
+ */
 //WOOOOOOOOOOO YATTAAAAAAAAA WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO WOOOOOOOOOOOOOOOOOOOOOOO
