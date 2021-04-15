@@ -1,48 +1,20 @@
 //arrays
 import { questions } from "./questions";
-console.log(questions);
 
 //other constants
 
 const DOMSelectors = {
   quizBlock: document.getElementById("quiz-block"),
-  start: document.getElementById("submit-btn"),
+  nextBtn: document.getElementById("submit-btn"),
   answerOne: document.getElementById("choice1"),
   answerTwo: document.getElementById("choice2"),
   answerThree: document.getElementById("choice3"),
   answerFour: document.getElementById("choice4"),
-  questions: document.getElementById("question-text"),
+  questionBlock: document.getElementById("question-text"),
 };
 
-//testing
+var currentQuestionIndex;
 
-function nextQuestion() {
-  console.log("Next owowowowo");
-}
-function responseOne() {
-  console.log("pressed 1");
-}
-function responseTwo() {
-  console.log("pressed 2");
-}
-function responseThree() {
-  console.log("pressed 3");
-}
-function responseFour() {
-  console.log("pressed 4");
-}
-function load() {
-  display: flex;
-}
-
-DOMSelectors.quizBlock.addEventListener("page load", load);
-DOMSelectors.start.addEventListener("click", nextQuestion);
-DOMSelectors.answerOne.addEventListener("click", responseOne);
-DOMSelectors.answerTwo.addEventListener("click", responseTwo);
-DOMSelectors.answerThree.addEventListener("click", responseThree);
-DOMSelectors.answerFour.addEventListener("click", responseFour);
-
-console.log("hi");
 //real deal
 
 /* List of things to do: 
@@ -53,11 +25,22 @@ console.log("hi");
 5. if question number < questions.length display next question
 5a. else display results */
 
-//1+2:
-
-window.addEventListener("load", (e) => {
-  console.log("started");
+function startGame() {
+  //console.log("started");
   DOMSelectors.quizBlock.classList.remove("hide");
-});
+  currentQuestionIndex = 0;
+  nextQuestion();
+}
 
-//WOOOOOOOOOOO YATTAAAAAAAAA WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO WOOOOOOOOOOOOOOOOOOOOOOO
+function nextQuestion() {
+  showQuestion(questions[currentQuestionIndex]);
+}
+
+function showQuestion(question) {
+  DOMSelectors.questionBlock.innerText = questions.questionContent;
+}
+
+window.addEventListener("load", startGame);
+
+const questionText = questions;
+console.log(questionText);
