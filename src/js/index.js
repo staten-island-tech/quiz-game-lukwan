@@ -37,7 +37,8 @@ function nextQuestion() {
 }
 
 function showQuestion(question) {
-  DOMSelectors.questionBlock.innerText = questions.questionContent;
+  DOMSelectors.questionBlock.innerText =
+    questions[currentQuestionIndex].questionContent;
 }
 
 window.addEventListener("load", startGame);
