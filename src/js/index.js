@@ -171,31 +171,3 @@ function showQuestion(question) {
 }
 
 window.addEventListener("load", startGame);
-
-/*
-
-things to do (4/19 4am)
--add the answer thing (use video)
--if question index > 8 show sub 
-
-
-thank u video guy but i've already gone off the deep end
-
-questions[currentQuestionIndex].choices.forEach((choice) => {
-    const answerChoice = document.createElement("button");
-    answerChoice.innerText =
-      questions[currentQuestionIndex].choices[0].choiceContent;
-    answerChoice.classList.add("quiz-answer", "btn");
-    if (answerChoice.correct) {
-      answerChoice.dataset.correct = answerChoice.correct;
-
-
-      function addValue() {
-  //adding the value of things in
-  if ((questions[currentQuestionIndex].choices = [0])) {
-    score = score + questions[currentQuestionIndex].choices[3].value;
-    console.log(questions[currentQuestionIndex].choices[3].value);
-    console.log(score);
-  }
-}
-*/
