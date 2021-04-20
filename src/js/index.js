@@ -12,6 +12,7 @@ const DOMSelectors = {
   answerFour: document.getElementById("choice4"),
   questionBlock: document.getElementById("question-text"),
   resultsBlock: document.getElementById("res-block"),
+  answerBlock: document.getElementById("answ-block"),
 };
 
 const resultsSelectors = {
@@ -89,7 +90,6 @@ function addValueChoice4() {
   } else {
     score = score + questions[currentQuestionIndex].choices[3].value;
   }
-  console.log(questions[currentQuestionIndex].choices[3]);
 
   if (currentQuestionIndex < 9) {
     currentQuestionIndex = currentQuestionIndex + 1;
@@ -119,7 +119,6 @@ function calculateScore() {
 
   DOMSelectors.resultsBlock.classList.remove("hide");
   DOMSelectors.quizBlock.classList.add("hide");
-  console.log(score);
 }
 
 /* List of things to do: ok
@@ -135,6 +134,11 @@ function startGame() {
   DOMSelectors.submitBtn.classList.add("hide");
   currentQuestionIndex = 0;
   nextQuestion();
+}
+
+function hideQuiz() {
+  DOMSelectors.answerBlock.classList.add("hide");
+  DOMSelectors.questionBlock.classList.add("hide");
 }
 
 function nextQuestion() {
@@ -162,11 +166,14 @@ function showQuestion(question) {
     questions[currentQuestionIndex].choices[3].choiceContent;
   DOMSelectors.answerFour.addEventListener("click", addValueChoice4);
 
-  if (currentQuestionIndex > 8) {
+  if (currentQuestionIndex == 9) {
     DOMSelectors.submitBtn.classList.remove("hide");
+    DOMSelectors.answerOne.addEventListener("click", hideQuiz);
+    DOMSelectors.answerTwo.addEventListener("click", hideQuiz);
+    DOMSelectors.answerThree.addEventListener("click", hideQuiz);
+    DOMSelectors.answerFour.addEventListener("click", hideQuiz);
   }
   DOMSelectors.submitBtn.addEventListener("click", calculateScore);
-  console.log(score);
 }
 
 window.addEventListener("load", startGame);
