@@ -131,9 +131,8 @@ function calculateScore() {
 5a. else display results */
 
 function startGame() {
-  //console.log("started");
   DOMSelectors.quizBlock.classList.remove("hide");
-  //DOMSelectors.submitBtn.classList.add("hide");
+  DOMSelectors.submitBtn.classList.add("hide");
   currentQuestionIndex = 0;
   nextQuestion();
 }
