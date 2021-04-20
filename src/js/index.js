@@ -58,4 +58,4 @@ console.log(questionText);
 
 /* things to do (4/19 4am)
 -add the answer thing (use video)
--if question index > 8 show sub
+-if question index > 8 show sub */
