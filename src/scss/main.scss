@@ -70,10 +70,10 @@ body {
 }
 
 .btn {
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 .btn:hover {
-  transform: scale(1.05);
+  background-color: black;
 }
 .btn:active {
   transform: scale(0.9);

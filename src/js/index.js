@@ -29,7 +29,16 @@ var score = 0;
 
 function addValueChoice1() {
   //adding the value of things in
-  score = score + questions[currentQuestionIndex - 1].choices[0].value;
+
+  if (currentQuestionIndex <= 9 && currentQuestionIndex < 0) {
+    score = score + questions[currentQuestionIndex - 1].choices[0].value;
+  } else {
+    score = score + questions[currentQuestionIndex].choices[0].value;
+  }
+
+  if (currentQuestionIndex < 9) {
+    currentQuestionIndex = currentQuestionIndex + 1;
+  }
 
   if (currentQuestionIndex <= 9) {
     nextQuestion();
@@ -38,7 +47,17 @@ function addValueChoice1() {
 
 function addValueChoice2() {
   //adding the value of things in
-  score = score + questions[currentQuestionIndex].choices[1].value;
+
+  if (currentQuestionIndex <= 9 && currentQuestionIndex < 0) {
+    score = score + questions[currentQuestionIndex - 1].choices[1].value;
+  } else {
+    score = score + questions[currentQuestionIndex].choices[1].value;
+  }
+
+  if (currentQuestionIndex < 9) {
+    currentQuestionIndex = currentQuestionIndex + 1;
+  }
+
   if (currentQuestionIndex <= 9) {
     nextQuestion();
   }
@@ -46,7 +65,17 @@ function addValueChoice2() {
 
 function addValueChoice3() {
   //adding the value of things in
-  score = score + questions[currentQuestionIndex].choices[2].value;
+
+  if (currentQuestionIndex <= 9 && currentQuestionIndex < 0) {
+    score = score + questions[currentQuestionIndex - 1].choices[2].value;
+  } else {
+    score = score + questions[currentQuestionIndex].choices[2].value;
+  }
+
+  if (currentQuestionIndex < 9) {
+    currentQuestionIndex = currentQuestionIndex + 1;
+  }
+
   if (currentQuestionIndex <= 9) {
     nextQuestion();
   }
@@ -54,7 +83,18 @@ function addValueChoice3() {
 
 function addValueChoice4() {
   //adding the value of things in
-  score = score + questions[currentQuestionIndex].choices[3].value;
+
+  if (currentQuestionIndex <= 9 && currentQuestionIndex < 0) {
+    score = score + questions[currentQuestionIndex - 1].choices[3].value;
+  } else {
+    score = score + questions[currentQuestionIndex].choices[3].value;
+  }
+  console.log(questions[currentQuestionIndex].choices[3]);
+
+  if (currentQuestionIndex < 9) {
+    currentQuestionIndex = currentQuestionIndex + 1;
+  }
+
   if (currentQuestionIndex <= 9) {
     nextQuestion();
   }
@@ -78,7 +118,8 @@ function calculateScore() {
   }
 
   DOMSelectors.resultsBlock.classList.remove("hide");
-  console.log("hi");
+  DOMSelectors.quizBlock.classList.add("hide");
+  console.log(score);
 }
 
 /* List of things to do: ok
@@ -106,6 +147,8 @@ function showQuestion(question) {
   DOMSelectors.questionBlock.innerText =
     questions[currentQuestionIndex].questionContent;
 
+  questions[currentQuestionIndex].sort;
+
   //answer text changing
   DOMSelectors.answerOne.innerText =
     questions[currentQuestionIndex].choices[0].choiceContent;
@@ -119,10 +162,6 @@ function showQuestion(question) {
   DOMSelectors.answerFour.innerText =
     questions[currentQuestionIndex].choices[3].choiceContent;
   DOMSelectors.answerFour.addEventListener("click", addValueChoice4);
-
-  if (currentQuestionIndex < 9) {
-    currentQuestionIndex = currentQuestionIndex + 1;
-  }
 
   if (currentQuestionIndex > 8) {
     DOMSelectors.submitBtn.classList.remove("hide");
