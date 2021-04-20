@@ -5,7 +5,7 @@ import { questions } from "./questions";
 
 const DOMSelectors = {
   quizBlock: document.getElementById("quiz-block"),
-  nextBtn: document.getElementById("submit-btn"),
+  submitBtn: document.getElementById("submit-btn"),
   answerOne: document.getElementById("choice1"),
   answerTwo: document.getElementById("choice2"),
   answerThree: document.getElementById("choice3"),
@@ -14,6 +14,7 @@ const DOMSelectors = {
 };
 
 var currentQuestionIndex;
+var score = 0;
 
 //real deal
 
@@ -28,6 +29,7 @@ var currentQuestionIndex;
 function startGame() {
   //console.log("started");
   DOMSelectors.quizBlock.classList.remove("hide");
+  DOMSelectors.submitBtn.classList.add("hide");
   currentQuestionIndex = 0;
   nextQuestion();
 }
@@ -39,9 +41,21 @@ function nextQuestion() {
 function showQuestion(question) {
   DOMSelectors.questionBlock.innerText =
     questions[currentQuestionIndex].questionContent;
+  questions.choice.forEach((answer) => {
+    const answerChoice = document.createElement("button");
+    answerChoice.innerText = choice.text;
+    answerChoice.classList.add("quiz-answer btn");
+    if (choice.correct) {
+      score = score + 1;
+    }
+  });
 }
 
 window.addEventListener("load", startGame);
 
 const questionText = questions;
 console.log(questionText);
+
+/* things to do (4/19 4am)
+-add the answer thing (use video)
+-if question index > 8 show sub
